@@ -1,1 +1,70 @@
 
+name: KRMU Lab Assignment Submission
+description: Submit your practical file for faculty evaluation
+title: "[LAB SUBMISSION] "
+labels:
+  - lab-submission
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## K.R. Mangalam University
+        Department of Computer Science and Engineering
+
+        Upload your completed practical file.
+        Submit one ZIP file containing your source code and screenshots,
+        or a PDF where applicable.
+
+  - type: input
+    id: student_name
+    attributes:
+      label: Student Name
+      placeholder: Enter your full name
+    validations:
+      required: true
+
+  - type: input
+    id: roll_number
+    attributes:
+      label: University Roll Number
+      placeholder: Enter your university roll number
+    validations:
+      required: true
+
+  - type: dropdown
+    id: subject
+    attributes:
+      label: Subject
+      options:
+        - Fundamentals of Cloud
+        - DevOps
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: experiment
+    attributes:
+      label: Experiment Number
+      placeholder: Example Experiment-01
+    validations:
+      required: true
+
+  - type: upload
+    id: assignment_file
+    attributes:
+      label: Upload Your Lab Assignment
+      description: Upload one ZIP or PDF containing your completed practical work.
+    validations:
+      required: true
+      accept: ".zip,.pdf"
+
+  - type: checkboxes
+    id: declaration
+    attributes:
+      label: Declaration
+      options:
+        - label: I confirm that this is my own work and the details are correct.
+          required: true
+
