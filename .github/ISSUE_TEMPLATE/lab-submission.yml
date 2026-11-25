@@ -1,6 +1,6 @@
 
-name: KRMU Lab Assignment Submission
-description: Submit your practical file for faculty evaluation
+name: Complete Lab Manual Submission
+description: Submit your complete practical lab manual
 title: "[LAB SUBMISSION] "
 labels:
   - lab-submission
@@ -9,17 +9,17 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## K.R. Mangalam University
+        # K.R. Mangalam University
         Department of Computer Science and Engineering
 
-        Upload your completed practical file.
-        Submit one ZIP file containing your source code and screenshots,
-        or a PDF where applicable.
+        Submit your COMPLETE lab manual in one submission.
+        Combine all completed experiments, source code,
+        practical outputs and screenshots into one ZIP or PDF file.
 
   - type: input
     id: student_name
     attributes:
-      label: Student Name
+      label: Student Full Name
       placeholder: Enter your full name
     validations:
       required: true
@@ -43,19 +43,11 @@ body:
     validations:
       required: true
 
-  - type: input
-    id: experiment
-    attributes:
-      label: Experiment Number
-      placeholder: Example Experiment-01
-    validations:
-      required: true
-
   - type: upload
-    id: assignment_file
+    id: complete_lab_manual
     attributes:
-      label: Upload Your Lab Assignment
-      description: Upload one ZIP or PDF containing your completed practical work.
+      label: Upload Complete Lab Manual
+      description: Upload ONE ZIP or PDF containing all completed experiments, programs, outputs and screenshots.
     validations:
       required: true
       accept: ".zip,.pdf"
@@ -63,8 +55,7 @@ body:
   - type: checkboxes
     id: declaration
     attributes:
-      label: Declaration
+      label: Student Declaration
       options:
-        - label: I confirm that this is my own work and the details are correct.
+        - label: I confirm that I have completed the practical work and this submission is my own work.
           required: true
-
